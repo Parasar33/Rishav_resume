@@ -43,7 +43,7 @@ img{
 }
 
 .heading span{
-    color:var(--main-color);
+    color:#ffffff;
     text-transform: uppercase;
 }
 
