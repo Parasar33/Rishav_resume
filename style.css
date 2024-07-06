@@ -81,6 +81,7 @@ section {
     color: var(--sky);
 }
 
+
 header {
     position: fixed;
     top: 0;
@@ -97,8 +98,8 @@ header {
 }
 
 header .user img {
-    height: 17rem;
-    width: 17rem;
+    height: 20rem;
+    width: 18rem;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1rem;
@@ -179,7 +180,7 @@ header .navbar ul li a:hover {
     padding: 1rem 0;
 }
 
-.about .row {
+/* .about .row {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -234,9 +235,8 @@ header .navbar ul li a:hover {
 .about .row .counter .box a {
     font-size: 2rem;
     color: var(--sky);
-}
-
-.education {
+} */
+/* .education {
     min-height: 50vh;
 }
 
@@ -289,7 +289,7 @@ header .navbar ul li a:hover {
     font-size: 2rem;
     color: #fff;
     background: var(--sky);
-}
+} */
 
 .portfolio .work-list {
     display: flex;
