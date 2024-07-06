@@ -10,13 +10,21 @@
 
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Responsive Image Styles */
+        /* Default style for PC */
         .resume-image {
             display: block;
             margin-left: auto;
             margin-right: auto;
-            max-width: 100%;
-            height: auto;
+            width: 1000px;
+            height: 1200px;
+        }
+
+        /* Responsive style for mobile */
+        @media (max-width: 768px) {
+            .resume-image {
+                width: 100%;
+                height: auto;
+            }
         }
     </style>
 </head>
