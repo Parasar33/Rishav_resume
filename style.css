@@ -38,6 +38,29 @@ html::-webkit-scrollbar-thumb {
     background: var(--sky);
 }
 
+
+.typing-effect {
+    font-size: 2em; /* Adjust size as needed */
+    font-weight: bold; /* Make it stand out */
+    display: inline-block;
+    color: #00ffff; /* Change to your desired color */
+}
+
+.static-text {
+    color: #00ffff; /* Static text color */
+}
+
+.cursor {
+    display: inline-block;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+
 body {
     background: #111;
     overflow-x: hidden;
