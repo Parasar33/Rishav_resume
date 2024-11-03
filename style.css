@@ -40,7 +40,7 @@ html::-webkit-scrollbar-thumb {
 
 
 .typing-effect {
-    font-size: 2em; /* Adjust size as needed */
+    font-size: 2.5em; /* Adjust size as needed */
     font-weight: bold; /* Make it stand out */
     display: inline-block;
     color: #00ffff; /* Change to your desired color */
