@@ -5,50 +5,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rishav Resume</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Portfolio website of Rishav Parasar - Code Alchemist, Java Developer, and Problem Solver">
+    <meta name="keywords" content="Rishav Parasar, Java Developer, Backend Developer, Portfolio, Machine Learning">
+    <meta name="author" content="Rishav Parasar">
+    <meta property="og:title" content="Rishav Parasar - Portfolio">
+    <meta property="og:description" content="Portfolio website of Rishav Parasar - Code Alchemist">
+    <meta property="og:image" content="images/my-avatar.png">
+    <meta property="og:url" content="your-website-url">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Favicon -->
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Default style for PC */
-        .resume-image {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 1000px;
-            height: 1200px;
-        }
-
-        /* Responsive style for mobile */
-        @media (max-width: 768px) {
-            .resume-image {
-                width: 100%;
-                height: auto;
-            }
-        }
-    </style>
 </head>
 
 <body>
+    <!-- Theme Switch -->
+    <div class="theme-switch">
+        <input type="checkbox" id="theme-toggle">
+        <label for="theme-toggle" class="theme-label">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </label>
+    </div>
 
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+    </div>
+
+    <!-- Header -->
     <header>
         <div class="user">
-            <img src="images/my-avatar.png" alt="">
+            <img src="images/my-avatar.png" alt="Profile Picture">
             <h3 class="name">Rishav Parasar</h3>
             <p class="post">Code-Alchemist</p>
         </div>
         <nav class="navbar">
             <ul>
                 <li><a href="#home">home</a></li>
-                <li><a href="#about">resume</a></li>
+                <li><a href="#skills">skills</a></li>
                 <li><a href="#portfolio">projects</a></li>
                 <li><a href="#contact">contact</a></li>
             </ul>
         </nav>
-
     </header>
 
+    <!-- Menu Button -->
     <div id="menu" class="fas fa-bars"></div>
+
+    <!-- Home Section -->
     <section class="home" id="home">
         <h3 id="greeting"></h3>
         <h1>I'M <span>Rishav Parasar</span></h1>
@@ -58,187 +72,360 @@
             <span class="cursor">|</span>
         </div>
     </section>
-    
-    
-    
-    
 
-    <section class="about" id="about">
-        <h1 class="heading"> <span>My</span> Resume </h1><br>
-        <img src="images/resume2.png" alt="" class="resume-image">
-        
-        <a href="rishav_parasar_resume.pdf" download class="btn">
-            Download Resume <i class="fa-solid fa-download"></i>
-        </a>
-    </section>
-    
-    
-    <div id="portfolio">
-        <div class="container">
-            <h1 class="heading">My&nbsp;<span>Projects</span></h1>
 
-            
-            <div class="work-list">
-                <div class="work-list">
-                    <div class="work">
-                        <img src="images/RAG_PDF.png">
-                        <div class="layer">
-                            <h3>RAG BASED PDF-VIEWER</h3>
-                            <p>A PDF viewer with Retrieval Augmented Generation (RAG) for enhanced document search and quick information retrieval.</p>
-                            <a href="https://github.com/Parasar33/PDF-VIEWER" target="_blank"><i
-                                    class="fas fa-external-link-alt"></i></a>
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <h1 class="heading">My <span>Skills</span></h1>
+        <div class="skills-container">
+            <!-- Languages -->
+            <div class="skill-category">
+                <h2>Languages</h2>
+                <div class="skill-items">
+                    <div class="skill-box">
+                        <i class="fab fa-java"></i>
+                        <h3>Java</h3>
+                    </div>
+                    <div class="skill-box">
+                        <i class="fab fa-python"></i>
+                        <h3>Python</h3>
+                    </div>
+                    <div class="skill-box">
+                        <i class="fas fa-code"></i>
+                        <h3>C</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Frameworks -->
+            <div class="skill-category">
+                <h2>Frameworks</h2>
+                <div class="skill-items">
+                    <div class="skill-box">
+                        <i class="fas fa-leaf"></i>
+                        <h3>Spring</h3>
+                    </div>
+                    <div class="skill-box">
+                        <!-- Custom Hibernate icon using simple shapes -->
+                        <div class="hibernate-icon">
+                            <i class="fas fa-database"></i>
+                            <!-- or use a custom icon: -->
+                            <svg viewBox="0 0 24 24" class="custom-hibernate-icon">
+                                <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 4l6 3v6l-6 3-6-3V9l6-3z"
+                                    fill="currentColor" />
+                            </svg>
                         </div>
+                        <h3>Hibernate</h3>
                     </div>
-                <div class="work">
-                    <img src="images/snakes_ladders.png">
-                    <div class="layer">
-                        <h3>JAVA SNAKES & LADDERS</h3>
-                        <p>The game features turn-based gameplay, dice roll functionality, and a graphical display of the board.</p>
-                        <a href="https://github.com/Parasar33/Snakes-and-Ladders" target="_blank"><i
-                                class="fas fa-external-link-alt"></i></a>
+                    <div class="skill-box">
+                        <i class="fab fa-java"></i>
+                        <h3>Java Swing</h3>
                     </div>
-                </div>
-                <div class="work">
-                    <img src="images/digit_recognition.png">
-                    <div class="layer">
-                        <h3>ANN BASED DIGIT RECOGNITION</h3>
-                        <p>A digit recognition tool using Artificial Neural Networks (ANN) for accurate handwritten digit classification.</p>
-                        <a href="https://github.com/Parasar33/Digit-Recognition" target="_blank"><i
-                                class="fas fa-external-link-alt"></i></a>
+                    <div class="skill-box">
+                        <i class="fab fa-java"></i>
+                        <h3>JavaFX</h3>
+                    </div>
+                    <div class="skill-box">
+                        <i class="fab fa-bootstrap"></i>
+                        <h3>Bootstrap</h3>
                     </div>
                 </div>
-                <div class="work">
-                    <img src="images/dynamic_route.png">
-                    <div class="layer">
-                        <h3>ROUTE NAVIGATION OPTIMIZER</h3>
-                        <p>A route-finding tool that combines Genetic Algorithm optimization with A* Search for efficient and dynamic pathfinding solutions.</p>
-                        <a href="https://github.com/Parasar33/Dynamic-Route" target="_blank"><i
-                                class="fas fa-external-link-alt"></i></a>
+            </div>
+
+            <!-- Web Technologies -->
+            <div class="skill-category">
+                <h2>Web Technologies</h2>
+                <div class="skill-items">
+                    <div class="skill-box">
+                        <i class="fab fa-html5"></i>
+                        <h3>HTML</h3>
+                    </div>
+                    <div class="skill-box">
+                        <i class="fab fa-css3-alt"></i>
+                        <h3>CSS</h3>
+                    </div>
+                    <div class="skill-box">
+                        <i class="fab fa-js"></i>
+                        <h3>JSP</h3>
+                    </div>
+                    <div class="skill-box">
+                        <i class="fas fa-server"></i>
+                        <h3>Servlets</h3>
                     </div>
                 </div>
-                <div class="work">
-                    <img src="images/snake_play.png">
-                    <div class="layer">
-                        <h3>SNAKE GAME REMASTERED</h3>
-                        <p>The game includes high score tracking and persistent data storage to save the highest scores achieved by players.</p>
-                        <a href="https://github.com/Parasar33/Java-Snake-Game" target="_blank"><i
-                                class="fas fa-external-link-alt"></i></a>
+            </div>
+
+            <!-- Tools -->
+            <div class="skill-category">
+                <h2>Tools</h2>
+                <div class="skill-items">
+                    <div class="skill-box">
+                        <i class="fab fa-git-alt"></i>
+                        <h3>Git</h3>
+                    </div>
+                    <div class="skill-box">
+                        <i class="fab fa-github"></i>
+                        <h3>Github</h3>
+                    </div>
+                    <div class="skill-box">
+                        <i class="fas fa-cogs"></i>
+                        <h3>Maven</h3>
+                    </div>
+                    <div class="skill-box">
+                        <i class="fas fa-cube"></i>
+                        <h3>Gradle</h3>
+                    </div>
+                    <div class="skill-box">
+                        <i class="fas fa-code-branch"></i>
+                        <h3>IntelliJ IDEA</h3>
                     </div>
                 </div>
-                <div class="work">
-                    <img src="images/sudoku.png">
-                    <div class="layer">
-                        <h3>GUI BASED SUDOKU SOLVER</h3>
-                        <p>The code initializes the GUI components and handles user interactions for both solving and
-                            getting solutions.</p>
-                        <a href="https://github.com/Parasar33/Sudoku-Solver-GUI" target="_blank"><i
-                                class="fas fa-external-link-alt"></i></a>
+            </div>
+
+            <!-- Data Management -->
+            <div class="skill-category">
+                <h2>Data Management</h2>
+                <div class="skill-items">
+                    <div class="skill-box">
+                        <i class="fas fa-database"></i>
+                        <h3>MySQL</h3>
                     </div>
-                </div>
-                <div class="work">
-                    <img src="images/tictactoeAI.png">
-                    <div class="layer">
-                        <h3>TIC-TAC-TOE AI</h3>
-                        <p>pySimpleGUI based unbeatable tic tac toe by minimax algorithm.</p>
-                        <a href="https://github.com/Parasar33/Tic-Tac-Toe-vs-AI" target="_blank"><i
-                                class="fas fa-external-link-alt"></i></a>
+                    <div class="skill-box">
+                        <i class="fas fa-database"></i>
+                        <h3>SQLite</h3>
                     </div>
-                </div>
-                <div class="work">
-                    <img src="images/bookStore.jpg">
-                    <div class="layer">
-                        <h3>ONLINE BOOK STORE</h3>
-                        <p>The book store operates using HTML,CSS, and primarily PHP & MySQL to provide a good user experience.</p>
-                        <a href="https://github.com/Parasar33/Book-Store" target="_blank"><i
-                                class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/atm.png">
-                    <div class="layer">
-                        <h3>ATM GUI</h3>
-                        <p>Created an ATM software using swing tools.</p>
-                        <a href="https://github.com/Parasar33/ATM_GUI" target="_blank"><i
-                                class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/resturant.png">
-                    <div class="layer">
-                        <h3>RESTAURANT BILLING SYSTEM</h3>
-                        <p>Easy and simple restaurant billing program using C language.</p>
-                        <a href="https://github.com/Parasar33/C--RESTURANT-BILLING-SYSTEM" target="_blank"><i
-                                class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/railway.png">
-                    <div class="layer">
-                        <h3>RAILWAY RESERVATION SYSTEM</h3>
-                        <p>Here is a C code that will help users create tickets for travelers.</p>
-                        <a href="https://github.com/Parasar33/Railway_Reservation_system" target="_blank"><i
-                                class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/tictactoe.png">
-                    <div class="layer">
-                        <h3>GUI BASED TIC-TAC-TOE GAME</h3>
-                        <p>This code is a simple implementation of a Tic-Tac-Toe game using Java Swing.</p>
-                        <a href="https://github.com/Parasar33/Tic-Tac-Toe-GUI" target="_blank"><i
-                                class="fas fa-external-link-alt"></i></a>
+                    <div class="skill-box">
+                        <i class="fas fa-code"></i>
+                        <h3>JSON</h3>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+        <a href="rishav_parasar_resume.pdf" download class="btn">
+            Download Resume <i class="fas fa-download"></i>
+        </a>
+    </section>
 
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <h1 class="heading">My <span>Projects</span></h1>
+
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="app">App</button>
+            <button class="filter-btn" data-filter="ai">AI/ML</button>
+        </div>
+
+        <div class="work-list">
+            <!-- Project cards with corrected image paths -->
+            <div class="work" data-category="app">
+                <img src="images/Re-Winder.png" alt="Re-Winder">
+                <div class="layer">
+                    <h3>RE-WINDER</h3>
+                    <p>A powerful screen activity recorder that helps you rewind and 
+                        review your day through automated screenshots and time-lapse creation.</p>
+                    <a href="https://github.com/Parasar33/Re-Winder" target="_blank">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="work" data-category="ai">
+                <img src="images/RAG_PDF.png" alt="RAG PDF Viewer">
+                <div class="layer">
+                    <h3>RAG BASED PDF-VIEWER</h3>
+                    <p>A PDF viewer with Retrieval Augmented Generation (RAG) for enhanced 
+                        document search and quick information retrieval.</p>
+                    <a href="https://github.com/Parasar33/PDF-VIEWER" target="_blank">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="work" data-category="app">
+                <img src="images/snakes_ladders.png" alt="Snakes & Ladders">
+                <div class="layer">
+                    <h3>JAVA SNAKES & LADDERS</h3>
+                    <p>The game features turn-based gameplay, dice roll functionality, and a graphical display of the
+                        board.</p>
+                    <a href="https://github.com/Parasar33/Snakes-and-Ladders" target="_blank">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="work" data-category="ai">
+                <img src="images/digit_recognition.png" alt="Digit Recognition">
+                <div class="layer">
+                    <h3>ANN BASED DIGIT RECOGNITION</h3>
+                    <p>A digit recognition tool using Artificial Neural Networks (ANN) for accurate handwritten digit
+                        classification.</p>
+                    <a href="https://github.com/Parasar33/Digit-Recognition" target="_blank">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="work" data-category="ai">
+                <img src="images/dynamic_route.png" alt="Route Navigation">
+                <div class="layer">
+                    <h3>ROUTE NAVIGATION OPTIMIZER</h3>
+                    <p>A route-finding tool that combines Genetic Algorithm optimization with A* Search for efficient
+                        and dynamic pathfinding solutions.</p>
+                    <a href="https://github.com/Parasar33/Dynamic-Route" target="_blank">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="work" data-category="app">
+                <img src="images/snake_play.png" alt="Snake Game">
+                <div class="layer">
+                    <h3>SNAKE GAME REMASTERED</h3>
+                    <p>The game includes high score tracking and persistent data storage to save the highest scores
+                        achieved by players.</p>
+                    <a href="https://github.com/Parasar33/Java-Snake-Game" target="_blank">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="work" data-category="app">
+                <img src="images/sudoku.png" alt="Sudoku Solver">
+                <div class="layer">
+                    <h3>GUI BASED SUDOKU SOLVER</h3>
+                    <p>The code initializes the GUI components and handles user interactions for both solving and
+                        getting solutions.</p>
+                    <a href="https://github.com/Parasar33/Sudoku-Solver-GUI" target="_blank">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="work" data-category="ai">
+                <img src="images/tictactoeAI.png" alt="TicTacToe AI">
+                <div class="layer">
+                    <h3>TIC-TAC-TOE AI</h3>
+                    <p>pySimpleGUI based unbeatable tic tac toe by minimax algorithm.</p>
+                    <a href="https://github.com/Parasar33/Tic-Tac-Toe-vs-AI" target="_blank">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="work" data-category="web">
+                <img src="images/bookStore.jpg" alt="Book Store">
+                <div class="layer">
+                    <h3>ONLINE BOOK STORE</h3>
+                    <p>The book store operates using HTML,CSS, and primarily PHP & MySQL to provide a good user
+                        experience.</p>
+                    <a href="https://github.com/Parasar33/Book-Store" target="_blank">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="work" data-category="app">
+                <img src="images/atm.png" alt="ATM GUI">
+                <div class="layer">
+                    <h3>ATM GUI</h3>
+                    <p>Created an ATM software using swing tools.</p>
+                    <a href="https://github.com/Parasar33/ATM_GUI" target="_blank">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="work" data-category="app">
+                <img src="images/resturant.png" alt="Restaurant Billing">
+                <div class="layer">
+                    <h3>RESTAURANT BILLING SYSTEM</h3>
+                    <p>Easy and simple restaurant billing program using C language.</p>
+                    <a href="https://github.com/Parasar33/C--RESTURANT-BILLING-SYSTEM" target="_blank">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="work" data-category="app">
+                <img src="images/railway.png" alt="Railway Reservation">
+                <div class="layer">
+                    <h3>RAILWAY RESERVATION SYSTEM</h3>
+                    <p>Here is a C code that will help users create tickets for travelers.</p>
+                    <a href="https://github.com/Parasar33/Railway_Reservation_system" target="_blank">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="work" data-category="app">
+                <img src="images/tictactoe.png" alt="TicTacToe Game">
+                <div class="layer">
+                    <h3>GUI BASED TIC-TAC-TOE GAME</h3>
+                    <p>This code is a simple implementation of a Tic-Tac-Toe game using Java Swing.</p>
+                    <a href="https://github.com/Parasar33/Tic-Tac-Toe-GUI" target="_blank">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
     <section class="contact" id="contact">
-        <h1 class="heading"><span>contact&nbsp;</span> me</h1>
+        <h1 class="heading"><span>Contact</span> Me</h1>
         <div class="row">
             <div class="content">
-                <h3 class="title">contact info</h3>
+                <h3 class="title">Contact Info</h3>
                 <div class="info">
                     <a href="https://www.linkedin.com/in/rishav-parasar/" target="_blank">
-                        <i class="fa-brands fa-linkedin"></i> LinkedIn
+                        <i class="fab fa-linkedin"></i> LinkedIn
                     </a>
                     <a href="https://github.com/parasar33" target="_blank">
-                        <i class="fa-brands fa-github"></i> GitHub
+                        <i class="fab fa-github"></i> GitHub
                     </a>
                     <a href="mailto:rishavparasar2004@gmail.com">
                         <i class="fas fa-envelope"></i> Gmail
                     </a>
-                    <a href=""><i class="fas fa-map-marker-alt"></i> Pune, Maharashtra </a>
+                    <a href="#">
+                        <i class="fas fa-map-marker-alt"></i> Pune, Maharashtra
+                    </a>
                 </div>
             </div>
-            <form action="https://api.web3forms.com/submit" method="POST" class="form" data-form >
+            <form action="https://api.web3forms.com/submit" method="POST" class="form" id="contact-form">
                 <input type="hidden" name="access_key" value="96aa8c67-1d0c-4c95-9c14-62367857e1b1">
-                <input type="text" name="Name" placeholder="name" class="box">
-                <input type="email" name="Email" placeholder="email" class="box">
-                <textarea name="Message" cols="30" rows="10" class="box message" placeholder="message"></textarea>
-                <button type="submit" class="btn">send <i class="fas fa-paper-plane"></i></button>
+                <input type="text" name="Name" placeholder="Name" class="box" required>
+                <input type="email" name="Email" placeholder="Email" class="box" required>
+                <textarea name="Message" cols="30" rows="10" class="box message" placeholder="Message" required></textarea>
+                <button type="submit" class="btn">Send <i class="fas fa-paper-plane"></i></button>
                 <span id="msg"></span>
-    
-              </form>
-
-           
+            </form>
         </div>
     </section>
 
+    <!-- Scroll to Top -->
     <a href="#home" class="top">
-        <img src="images/scroll-top-img.png" alt="">
+        <i class="fas fa-arrow-up"></i>
     </a>
-    <script src="https://kit.fontawesome.com/09df685748.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    <script src="script.js"></script>
+    <!-- Footer -->
     <footer>
         <p class="copyright">All Rights Reserved</p>
-        <a href="https://www.linkedin.com/in/rishav-parasar/" target="_blank">
-            <i class="fa-brands fa-linkedin"></i> LinkedIn
-        </a>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/rishav-parasar/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/parasar33" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/09df685748.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
