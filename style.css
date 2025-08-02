@@ -9,12 +9,12 @@
     --transition: all 0.3s ease;
 }
 
-[data-theme="light"] {
+/* [data-theme="light"] {
     --primary-color: #fff;
     --secondary-color: #111;
     --text-color: #333;
     --background-color: #f4f4f4;
-}
+} */
 
 * {
     font-family: 'Nunito', sans-serif;
@@ -886,5 +886,178 @@ footer .social-links a:hover {
 
 /* Alternative: Use a simpler database icon with custom styling */
 .hibernate-icon .fa-database {
+    color: var(--sky);
+}
+
+/* Work Experience Section Styles */
+.experience {
+    padding: 4rem 0;
+}
+
+.experience-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.experience-item {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+    background: rgba(0, 255, 255, 0.1);
+}
+
+.experience-info {
+    margin-bottom: 2rem;
+}
+
+.experience-info .company {
+    color: var(--sky);
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+}
+
+.experience-info .position {
+    color: var(--text-color);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.experience-info .duration {
+    color: #888;
+    font-size: 1.6rem;
+}
+
+.experience-details ul {
+    list-style: none;
+}
+
+.experience-details ul li {
+    color: var(--text-color);
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.experience-details ul li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--sky);
+}
+
+/* Responsive adjustments for experience section */
+@media (max-width: 768px) {
+    .experience-item {
+        padding: 2rem;
+    }
+
+    .experience-info .company {
+        font-size: 2.2rem;
+    }
+
+    .experience-info .position {
+        font-size: 1.8rem;
+    }
+
+    .experience-info .duration {
+        font-size: 1.4rem;
+    }
+
+    .experience-details ul li {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .experience-container {
+        padding: 1rem;
+    }
+
+    .experience-item {
+        padding: 1.5rem;
+    }
+}
+/* Additional Experience Section Styles */
+.experience-item .location {
+    color: #888;
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+}
+
+.experience-item .location i {
+    color: var(--sky);
+    margin-right: 0.5rem;
+}
+
+.experience-details .description {
+    color: var(--text-color);
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.skills-used {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.skill-tag {
+    background: rgba(0, 255, 255, 0.1);
+    color: var(--sky);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 1.4rem;
+    transition: var(--transition);
+}
+
+.skill-tag:hover {
+    background: var(--sky);
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .skills-used {
+        gap: 0.8rem;
+    }
+    
+    .skill-tag {
+        font-size: 1.2rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .experience-details .description {
+        font-size: 1.4rem;
+    }
+}
+
+.experience-details ul {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.experience-details ul li {
+    color: var(--text-color);
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.experience-details ul li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
     color: var(--sky);
 }

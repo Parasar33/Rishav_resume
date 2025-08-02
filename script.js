@@ -104,7 +104,7 @@ function handleForm(e) {
             'Accept': 'application/json'
         },
         body: JSON.stringify({
-            access_key: "96aa8c67-1d0c-4c95-9c14-62367857e1b1",
+            access_key: "04967c76-a642-4d04-a468-d31c89fc36c8",
             name: form.querySelector('input[name="Name"]').value,
             email: form.querySelector('input[name="Email"]').value,
             message: form.querySelector('textarea[name="Message"]').value
