@@ -7,7 +7,8 @@ const menu = document.getElementById('menu');
 const header = document.querySelector('header');
 const filterBtns = document.querySelectorAll('.filter-btn');
 const works = document.querySelectorAll('.work');
-const form = document.querySelector('.form');
+const form = document.getElementById('contact-form');
+form.addEventListener('submit', handleForm);
 
 // Typing Animation Phrases
 const phrases = [
@@ -229,3 +230,4 @@ $.fn.isInViewport = function() {
     const viewportBottom = viewportTop + $(window).height();
     return elementBottom > viewportTop && elementTop < viewportBottom;
 };
+
