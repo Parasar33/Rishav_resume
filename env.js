@@ -1,0 +1,1 @@
+window.__ENV = { WEB3FORMS_KEY: "04967c76-a642-4d04-a468-d31c89fc36c8" };
