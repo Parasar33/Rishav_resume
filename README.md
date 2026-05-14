@@ -1,41 +1,45 @@
-# PORTFOLIO WEBSITE
+# Rishav Parasar — Portfolio
 
-This repository contains the source code for my personal resume website, showcasing my skills, projects, and contact information. The website is designed to provide a clean and professional presentation of my background as a problem solver and Java backend development enthusiast.
+Static personal portfolio built with HTML, CSS and vanilla JavaScript.
 
-## Overview
+**Quick links**
 
-The website serves as an online resume, providing visitors with an overview of my professional profile, including:
-- An introduction to who I am and my interests.
-- A section displaying my resume.
-- A portfolio showcasing various projects I have worked on.
-- Contact information and a form for visitors to reach out.
+- Live site: GitHub Pages (deployed via `.github/workflows/deploy.yml`)
+- Resume: Hosted via Google Drive (link updated in `index.html`)
+- Favicon/logo: `images/logo.svg`
 
-## Features
+**Repository structure**
 
-- **Responsive Design**: The site is designed to be responsive, adapting to different screen sizes.
-- **Interactive Portfolio**: Displays my projects with descriptions and links to their GitHub repositories.
-- **Downloadable Resume**: Visitors can download my resume directly from the website.
-- **Contact Form**: A functional form that allows users to send messages directly to my email.
+- `index.html` — Main markup (hero, timeline, projects, contact)
+- `style.css` — Design tokens and component styles
+- `script.js` — Typing effect, timeline date logic, role visibility
+- `images/` — Avatar, logo and project images
+- `.github/workflows/deploy.yml` — GitHub Actions workflow to deploy to Pages
 
-## Technologies Used
+**Preview locally**
 
-- **HTML5**: For structuring the website content.
-- **CSS3**: For styling the website and ensuring responsive design.
-- **JavaScript**: For interactive elements, including the contact form functionality.
-- **Font Awesome**: For icons used throughout the website.
+From the project root run:
 
-## Usage
+```bash
+python -m http.server 8000
+# then open http://localhost:8000
+```
 
-1. Clone the repository or download the source code.
-2. Open `index.html` in a web browser to view the website.
-3. Navigate through the sections using the navigation menu.
+**Editing notes**
 
-## Future Improvements
+- Timeline: the Work Experience section in `index.html` contains a combined CDK Global card with `role-progression` entries. Each role includes a `role-period` and list of responsibilities.
+- Future roles: to hide a future role until it becomes active, add `data-show-from="YYYY-MM"` to the role container. The included script will hide entries whose show date is in the future.
+- Resume button: the nav Resume link was updated to use a Google Drive direct-download URL. To change hosting, replace that href in `index.html`.
 
-- **Enhanced Accessibility**: Implementing features to improve accessibility for all users.
-- **SEO Optimization**: Adding meta tags and descriptions to improve search engine visibility.
-- **Dynamic Content Loading**: Integrating a backend system for dynamic updates to projects and resume.
+**Deployment**
 
-## License
+This repo uses GitHub Actions Pages. The workflow `.github/workflows/deploy.yml` uploads the repository root and deploys to Pages on pushes to the `main` branch. To deploy a specific folder, change the `path` in the `actions/upload-pages-artifact@v1` step.
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+**Useful links & tips**
+
+- Swap resume host: Google Drive, OneDrive, Dropbox, Netlify Drop, or S3 are all supported options.
+- Favicon fallbacks: add PNG/ICO files in `images/` and reference them from `index.html` if you need broader compatibility.
+
+License: MIT — see `LICENSE`.
+
+Last updated: May 15, 2026

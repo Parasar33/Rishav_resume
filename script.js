@@ -6,16 +6,15 @@ const progressBar = document.getElementById('progress-bar');
 const menu = document.getElementById('menu');
 const header = document.querySelector('header');
 const filterBtns = document.querySelectorAll('.filter-btn');
-const works = document.querySelectorAll('.work');
+const projects = document.querySelectorAll('.project-card');
 const form = document.getElementById('contact-form');
-form.addEventListener('submit', handleForm);
 
 // Typing Animation Phrases
 const phrases = [
-    "Java Swing Developer. ",
-    "Backend Developer. ",
-    "Machine Learning Student. ",
-    "Problem Solver. "
+    "Associate Software Engineer. ",
+    ".Net Backend Developer. ",
+    "Machine Learning Engineer. ",
+    "Life long Problem Solver. "
 ];
 
 let currentPhraseIndex = 0;
@@ -72,19 +71,32 @@ function updateProgress() {
     progressBar.style.width = `${scrolled}%`;
 }
 
+// Header scroll effect
+function handleHeaderScroll() {
+    if (window.scrollY > 100) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+}
+
 // Project Filter
 function filterProjects(category) {
-    works.forEach(work => {
-        const workCategory = work.dataset.category;
-        if (category === 'all' || workCategory === category) {
-            work.style.display = 'block';
-            work.classList.add('fade-in');
+    projects.forEach(project => {
+        const projectCategory = project.dataset.category;
+        if (category === 'all' || projectCategory === category) {
+            project.style.display = 'block';
+            project.classList.add('fade-in');
         } else {
-            work.style.display = 'none';
-            work.classList.remove('fade-in');
+            project.style.display = 'none';
+            project.classList.remove('fade-in');
         }
     });
 }
+
+// Runtime configuration (injected via `env.js`)
+// For local development run `node tools/generate-env.js` or create `env.js` manually.
+const WEB3FORMS_KEY = (window.__ENV && window.__ENV.WEB3FORMS_KEY) || null;
 
 // Form Handling
 function handleForm(e) {
@@ -98,6 +110,15 @@ function handleForm(e) {
     
     const msg = document.getElementById('msg');
 
+    if (!WEB3FORMS_KEY) {
+        msg.innerHTML = "Form is disabled — missing configuration (WEB3FORMS_KEY).";
+        msg.style.color = "#ef4444";
+        submitBtn.innerHTML = originalBtnText;
+        submitBtn.disabled = false;
+        setTimeout(() => { msg.innerHTML = ""; }, 5000);
+        return;
+    }
+
     fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
@@ -105,7 +126,7 @@ function handleForm(e) {
             'Accept': 'application/json'
         },
         body: JSON.stringify({
-            access_key: "04967c76-a642-4d04-a468-d31c89fc36c8",
+            access_key: WEB3FORMS_KEY,
             name: form.querySelector('input[name="Name"]').value,
             email: form.querySelector('input[name="Email"]').value,
             message: form.querySelector('textarea[name="Message"]').value
@@ -114,8 +135,8 @@ function handleForm(e) {
     .then(response => response.json())
     .then(data => {
         if(data.success) {
-            msg.innerHTML = "Message sent successfully";
-            msg.style.color = "var(--sky)";
+            msg.innerHTML = "Message sent successfully!";
+            msg.style.color = "#22d3ee";
             form.reset();
         } else {
             throw new Error('Form submission failed');
@@ -123,7 +144,7 @@ function handleForm(e) {
     })
     .catch(error => {
         msg.innerHTML = "Error sending message. Please try again.";
-        msg.style.color = "#ff4444";
+        msg.style.color = "#ef4444";
         console.error('Error:', error);
     })
     .finally(() => {
@@ -135,6 +156,27 @@ function handleForm(e) {
         setTimeout(() => {
             msg.innerHTML = "";
         }, 5000);
+    });
+}
+
+// Active navigation link
+function updateActiveNavLink() {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    let current = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (window.scrollY >= sectionTop - 200) {
+            current = section.getAttribute('id');
+        }
+    });
+    
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+        }
     });
 }
 
@@ -150,22 +192,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
         document.documentElement.setAttribute('data-theme', savedTheme);
-        themeToggle.checked = savedTheme === 'light';
+        if (themeToggle) themeToggle.checked = savedTheme === 'light';
+    }
+
+    // Attach form submit handler after DOM is ready to guarantee element exists
+    if (form) {
+        form.addEventListener('submit', handleForm);
     }
 });
 
 // Scroll events
 window.addEventListener('scroll', () => {
     updateProgress();
+    handleHeaderScroll();
+    updateActiveNavLink();
     
     // Show/hide scroll to top button
     const topButton = document.querySelector('.top');
-    topButton.style.display = window.scrollY > 300 ? 'block' : 'none';
+    if (topButton) {
+        topButton.style.display = window.scrollY > 300 ? 'flex' : 'none';
+    }
 });
 
-// Menu toggle
+// Menu toggle (new hamburger menu)
 menu.addEventListener('click', () => {
-    menu.classList.toggle('fa-times');
+    menu.classList.toggle('active');
     header.classList.toggle('toggle');
 });
 
@@ -173,12 +224,22 @@ menu.addEventListener('click', () => {
 window.addEventListener('resize', () => {
     if (window.innerWidth > 991) {
         header.classList.remove('toggle');
-        menu.classList.remove('fa-times');
+        menu.classList.remove('active');
     }
 });
 
+// Close menu when clicking a nav link (mobile)
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        header.classList.remove('toggle');
+        menu.classList.remove('active');
+    });
+});
+
 // Theme toggle
-themeToggle.addEventListener('change', handleTheme);
+if (themeToggle) {
+    themeToggle.addEventListener('change', handleTheme);
+}
 
 // Project filter buttons
 filterBtns.forEach(btn => {
@@ -189,23 +250,18 @@ filterBtns.forEach(btn => {
     });
 });
 
-// Form submission
-form.addEventListener('submit', handleForm);
+// Form submission (listener added above)
 
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', e => {
         e.preventDefault();
         const target = document.querySelector(anchor.getAttribute('href'));
-        target.scrollIntoView({
+        if (target) {
+            target.scrollIntoView({
             behavior: 'smooth',
             block: 'start'
         });
-        
-        // Close mobile menu if open
-        if (window.innerWidth < 991) {
-            header.classList.remove('toggle');
-            menu.classList.remove('fa-times');
         }
     });
 });
@@ -214,9 +270,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 $(document).ready(function() {
     // Add animation classes on scroll
     $(window).scroll(function() {
-        $('.work').each(function() {
+        $('.project-card, .timeline-card, .skill-card').each(function() {
             if ($(this).isInViewport()) {
-                $(this).addClass('slide-up');
+                $(this).addClass('fade-in');
             }
         });
     });
@@ -230,4 +286,3 @@ $.fn.isInViewport = function() {
     const viewportBottom = viewportTop + $(window).height();
     return elementBottom > viewportTop && elementTop < viewportBottom;
 };
-

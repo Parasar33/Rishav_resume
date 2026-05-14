@@ -4,169 +4,321 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rishav Resume</title>
+    <title>Rishav Parasar | Portfolio</title>
 
     <!-- SEO Meta Tags -->
     <meta name="description"
-        content="Portfolio website of Rishav Parasar - Code Alchemist, Java Developer, and Problem Solver">
-    <meta name="keywords" content="Rishav Parasar, Java Developer, Backend Developer, Portfolio, Machine Learning">
+        content="Portfolio website of Rishav Parasar - Code Alchemist, Associate Software Engineer, .Net Backend Developer, Machine Learning Engineer, and Life long Problem Solver">
+    <meta name="keywords" content="Rishav Parasar, Associate Software Engineer, .Net Backend Developer, Machine Learning Engineer, Portfolio">
     <meta name="author" content="Rishav Parasar">
     <meta property="og:title" content="Rishav Parasar - Portfolio">
     <meta property="og:description" content="Portfolio website of Rishav Parasar - Code Alchemist">
-    <meta property="og:image" content="images/my-avatar1.jpg">
+    <meta property="og:image" content="images/avatar-new.jpg">
     <meta property="og:url" content="parasar33.github.io/Rishav_resume">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="images/logo.svg" type="image/svg+xml">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Theme Switch -->
-    <!-- <div class="theme-switch">
-        <input type="checkbox" id="theme-toggle">
-        <label for="theme-toggle" class="theme-label">
-            <i class="fas fa-sun"></i>
-            <i class="fas fa-moon"></i>
-        </label>
-    </div> -->
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="bg-gradient"></div>
+        <div class="bg-grid"></div>
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </div>
 
     <!-- Progress Bar -->
     <div class="progress-container">
         <div class="progress-bar" id="progress-bar"></div>
     </div>
 
-    <!-- Header -->
+    <!-- Navigation -->
     <header>
-        <div class="user">
-            <img src="images/my-avatar1.jpg" alt="Profile Picture">
-            <h3 class="name">Rishav Parasar</h3>
-            <p class="post">Code-Alchemist</p>
-        </div>
         <nav class="navbar">
-            <ul>
-                <li><a href="#home">home</a></li>
-                <li><a href="#experience">experience</a></li>
-                <li><a href="#skills">skills</a></li>
-                <li><a href="#portfolio">projects</a></li>
-                <li><a href="#contact">contact</a></li>
+            <a href="#home" class="nav-logo">
+                <span class="logo-text">RP</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#portfolio" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
+            <a href="https://drive.google.com/uc?export=download&id=1Ma686UUQox5-FEZ_EMTjwkOHW9HuhWbj" class="nav-cta" target="_blank" rel="noopener">
+                <span>Resume</span>
+                <i class="fas fa-download"></i>
+            </a>
         </nav>
     </header>
 
-    <!-- Menu Button -->
-    <div id="menu" class="fas fa-bars"></div>
+    <!-- Mobile Menu Button -->
+    <div id="menu" class="menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 
-    <!-- Home Section -->
+    <!-- Theme Toggle (Hidden by default) -->
+    <div class="theme-switch" style="display: none;">
+        <input type="checkbox" id="theme-toggle">
+        <label for="theme-toggle" class="theme-label"></label>
+    </div>
+
+    <!-- Hero Section -->
     <section class="home" id="home">
-        <h3 id="greeting"></h3>
-        <h1>I'M <span>Rishav Parasar</span></h1>
-        <div class="typing-effect">
-            <span class="static-text">I am </span>
-            <span class="typed-text"></span>
-            <span class="cursor">|</span>
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-greeting" id="greeting"></p>
+                <h1 class="hero-title">
+                    <span class="title-line">I'm</span>
+                    <span class="title-name">Rishav Parasar</span>
+                </h1>
+                <div class="typing-effect">
+                    <span class="static-text">I am </span>
+                    <span class="typed-text"></span>
+                    <span class="cursor">|</span>
+                </div>
+                <p class="hero-description">
+                    Passionate developer crafting elegant solutions through clean code. 
+                    Specializing in backend systems, AI/ML, and full-stack development.
+                </p>
+                <div class="hero-cta">
+                    <a href="#portfolio" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>Get In Touch</span>
+                    </a>
+                </div>
+                <div class="hero-social">
+                    <a href="https://github.com/parasar33" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/rishav-parasar/" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:rishavparasar2004@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <div class="image-glow"></div>
+                    <img src="images/avatar-new.png" alt="Rishav Parasar" class="profile-img">
+                    <div class="image-ring"></div>
+                </div>
+                <div class="floating-badge">
+                    <span class="badge-icon"><i class="fas fa-code"></i></span>
+                    <span class="badge-text">Code Alchemist</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
         </div>
     </section>
 
     <!-- Work Experience Section -->
     <section class="experience" id="experience">
-        <h1 class="heading">Work <span>Experience</span></h1>
-        <div class="experience-container">
-
-            <!-- CDK Global -->
-            <div class="experience-item" data-start="2025-03" data-end="present">
-                <div class="experience-info">
-                    <h3 class="company">CDK Global</h3>
-                    <p class="position">SDE Intern</p>
-                    <p class="duration"></p>
-                    <p class="location"><i class="fas fa-map-marker-alt"></i> Pune, Maharashtra, India · On-site</p>
+        <div class="section-header">
+            <span class="section-tag">Career</span>
+            <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
+            <p class="section-subtitle">My professional journey and contributions</p>
+        </div>
+        
+        <div class="timeline">
+            <!-- CDK Global - Combined Entry -->
+            <div class="timeline-item" data-start="2025-03" data-end="present">
+                <div class="timeline-marker">
+                    <div class="marker-dot"></div>
                 </div>
-                <div class="experience-details">
-                    <ul>
-                        <li>Developing AI/ML models for automotive industry data analysis and prediction</li>
-                        <li>Building full-stack applications using React.js and .NET Core API</li>
-                        <li>Implementing responsive UI designs and RESTful API integrations</li>
-                    </ul>
-                    <div class="skills-used">
-                        <span class="skill-tag">React.js</span>
-                        <span class="skill-tag">.NET Core</span>
-                        <span class="skill-tag">Machine Learning</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">SQL</span>
+                <div class="timeline-card timeline-multi-role">
+                    <div class="card-header">
+                        <div class="company-info">
+                            <h3 class="company">CDK Global</h3>
+                            <span class="position">Associate Software Engineer</span>
+                        </div>
+                        <div class="duration-badge">
+                            <i class="far fa-calendar-alt"></i>
+                            <span class="duration"></span>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Pune, Maharashtra, India · On-site</span>
+                    </div>
+
+                    <!-- Role Progression -->
+                    <div class="role-progression">
+                        <!-- Current Role -->
+                        <div class="role-entry role-current" data-show-from="2026-06">
+                            <div class="role-header">
+                                <div class="role-title">
+                                    <i class="fas fa-chevron-right"></i>
+                                    <span>.NET Backend Associate Software Engineer</span>
+                                </div>
+                                <span class="role-period">Jun 2026 - Present</span>
+                            </div>
+                            <ul class="responsibilities">
+                                <li>Maintain and extend microservices built on ASP.NET Core</li>
+                                <li>Design and implement RESTful APIs and backend features</li>
+                                <li>Optimize database queries and application performance</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span class="tech-tag">ASP.NET Core</span>
+                                <span class="tech-tag">C#</span>
+                                <span class="tech-tag">AWS RDS</span>
+                                <span class="tech-tag">Harness</span>
+                                <span class="tech-tag">Microservices</span>
+                                <span class="tech-tag">Architecture</span>
+                            </div>
+                        </div>
+
+                        <!-- Previous Role -->
+                        <div class="role-entry role-previous">
+                            <div class="role-header">
+                                <div class="role-title">
+                                    <i class="fas fa-chevron-right"></i>
+                                    <span>SDE Intern</span>
+                                </div>
+                                <span class="role-period">Mar 2025 - May 2026</span>
+                            </div>
+                            <ul class="responsibilities">
+                                <li>Developing AI/ML models for automotive industry data analysis and prediction</li>
+                                <li>Building full-stack applications using React.js and .NET Core API</li>
+                                <li>Implementing responsive UI designs and RESTful API integrations</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span class="tech-tag">React.js</span>
+                                <span class="tech-tag">.NET Core</span>
+                                <span class="tech-tag">Machine Learning</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">SQL</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Outlier -->
-            <div class="experience-item" data-start="2024-12" data-end="2025-06">
-                <div class="experience-info">
-                    <h3 class="company">Outlier</h3>
-                    <p class="position">AI/ML Model Trainer</p>
-                    <p class="duration"></p>
-                    <p class="location"><i class="fas fa-globe"></i> Remote</p>
+            <div class="timeline-item" data-start="2024-12" data-end="2025-06">
+                <div class="timeline-marker">
+                    <div class="marker-dot"></div>
                 </div>
-                <div class="experience-details">
-                    <ul>
+                <div class="timeline-card">
+                    <div class="card-header">
+                        <div class="company-info">
+                            <h3 class="company">Outlier</h3>
+                            <span class="position">AI/ML Model Trainer</span>
+                        </div>
+                        <div class="duration-badge">
+                            <i class="far fa-calendar-alt"></i>
+                            <span class="duration"></span>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <i class="fas fa-globe"></i>
+                        <span>Remote</span>
+                    </div>
+                    <ul class="responsibilities">
                         <li>Creating high-quality content for AI/ML model training</li>
                         <li>Contributing to the development of advanced language models</li>
                         <li>Participating in quality assurance and model evaluation</li>
                     </ul>
-                    <div class="skills-used">
-                        <span class="skill-tag">AI/ML</span>
-                        <span class="skill-tag">NLP</span>
-                        <span class="skill-tag">Technical Writing</span>
-                        <span class="skill-tag">Data Analysis</span>
+                    <div class="tech-stack">
+                        <span class="tech-tag">AI/ML</span>
+                        <span class="tech-tag">NLP</span>
+                        <span class="tech-tag">Technical Writing</span>
+                        <span class="tech-tag">Data Analysis</span>
                     </div>
                 </div>
             </div>
 
             <!-- Infosys Springboard -->
-            <div class="experience-item" data-start="2024-10" data-end="2024-12">
-                <div class="experience-info">
-                    <h3 class="company">Infosys Springboard</h3>
-                    <p class="position">Java Project Intern</p>
-                    <p class="duration"></p>
-                    <p class="location"><i class="fas fa-globe"></i> Remote</p>
+            <div class="timeline-item" data-start="2024-10" data-end="2024-12">
+                <div class="timeline-marker">
+                    <div class="marker-dot"></div>
                 </div>
-                <div class="experience-details">
-                    <ul>
+                <div class="timeline-card">
+                    <div class="card-header">
+                        <div class="company-info">
+                            <h3 class="company">Infosys Springboard</h3>
+                            <span class="position">Java Project Intern</span>
+                        </div>
+                        <div class="duration-badge">
+                            <i class="far fa-calendar-alt"></i>
+                            <span class="duration"></span>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <i class="fas fa-globe"></i>
+                        <span>Remote</span>
+                    </div>
+                    <ul class="responsibilities">
                         <li>Developed sports performance analysis web application using Spring Boot</li>
                         <li>Implemented data visualization features with React.js</li>
                         <li>Optimized MySQL database queries for better performance</li>
                     </ul>
-                    <div class="skills-used">
-                        <span class="skill-tag">Spring Boot</span>
-                        <span class="skill-tag">React.js</span>
-                        <span class="skill-tag">MySQL</span>
-                        <span class="skill-tag">Hibernate</span>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">React.js</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">Hibernate</span>
                     </div>
                 </div>
             </div>
 
             <!-- Aone Technologies -->
-            <div class="experience-item" data-start="2024-05" data-end="2024-08">
-                <div class="experience-info">
-                    <h3 class="company">Aone Technologies</h3>
-                    <p class="position">Java Developer Intern</p>
-                    <p class="duration"></p>
-                    <p class="location"><i class="fas fa-globe"></i> Remote</p>
+            <div class="timeline-item" data-start="2024-05" data-end="2024-08">
+                <div class="timeline-marker">
+                    <div class="marker-dot"></div>
                 </div>
-                <div class="experience-details">
-                    <ul>
+                <div class="timeline-card">
+                    <div class="card-header">
+                        <div class="company-info">
+                            <h3 class="company">Aone Technologies</h3>
+                            <span class="position">Java Developer Intern</span>
+                        </div>
+                        <div class="duration-badge">
+                            <i class="far fa-calendar-alt"></i>
+                            <span class="duration"></span>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <i class="fas fa-globe"></i>
+                        <span>Remote</span>
+                    </div>
+                    <ul class="responsibilities">
                         <li>Built warehouse management system using Java and JDBC</li>
                         <li>Developed RESTful APIs for system integration</li>
                         <li>Implemented client engagement tracking features</li>
                     </ul>
-                    <div class="skills-used">
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">JDBC</span>
-                        <span class="skill-tag">REST API</span>
-                        <span class="skill-tag">MySQL</span>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">JDBC</span>
+                        <span class="tech-tag">REST API</span>
+                        <span class="tech-tag">MySQL</span>
                     </div>
                 </div>
             </div>
@@ -178,7 +330,25 @@
             const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
                 "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-            document.querySelectorAll(".experience-item").forEach(item => {
+            // Hide future roles based on data-show-from attribute
+            const now = new Date();
+            document.querySelectorAll("[data-show-from]").forEach(roleEntry => {
+                const showFrom = roleEntry.getAttribute("data-show-from");
+                const showDate = new Date(showFrom + "-01");
+                
+                if (now < showDate) {
+                    roleEntry.style.display = "none";
+                    
+                    // Update position title to show current role only
+                    const card = roleEntry.closest(".timeline-card");
+                    const positionSpan = card.querySelector(".company-info .position");
+                    if (positionSpan) {
+                        positionSpan.textContent = "SDE Intern";
+                    }
+                }
+            });
+
+            document.querySelectorAll(".timeline-item").forEach(item => {
                 const startAttr = item.getAttribute("data-start");
                 const endAttr = item.getAttribute("data-end");
 
@@ -204,466 +374,549 @@
 
     <!-- Skills Section -->
     <section class="skills" id="skills">
-        <h1 class="heading">My <span>Skills</span></h1>
-        <div class="skills-container">
+        <div class="section-header">
+            <span class="section-tag">Expertise</span>
+            <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+            <p class="section-subtitle">Technologies and tools I work with</p>
+        </div>
+        
+        <div class="skills-grid">
             <!-- Languages -->
-            <div class="skill-category">
-                <h2>Languages</h2>
-                <div class="skill-items">
-                    <div class="skill-box">
-                        <i class="fab fa-java"></i>
-                        <h3>Java</h3>
-                    </div>
-                    <div class="skill-box">
-                        <i class="fab fa-python"></i>
-                        <h3>Python</h3>
-                    </div>
-                    <div class="skill-box">
-                        <i class="fas fa-code"></i>
-                        <h3>C</h3>
-                    </div>
-                    <div class="skill-box">
-                        <i class="fab fa-js"></i>
-                        <h3>JavaScript</h3>
-                    </div>
-                    <div class="skill-box">
-                        <i class="fab fa-microsoft"></i>
-                        <h3>C#</h3>
-                    </div>
+            <div class="skill-card skill-card-large">
+                <div class="card-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3 class="card-title">Languages</h3>
+                <div class="skill-chips">
+                    <span class="chip"><i class="fab fa-java"></i> Java</span>
+                    <span class="chip"><i class="fab fa-python"></i> Python</span>
+                    <span class="chip"><i class="fas fa-copyright"></i> C</span>
+                    <span class="chip"><i class="fab fa-js"></i> JavaScript</span>
+                    <span class="chip"><i class="fab fa-microsoft"></i> C#</span>
                 </div>
             </div>
 
             <!-- Frameworks -->
-            <div class="skill-category">
-                <h2>Frameworks</h2>
-                <div class="skill-items">
-                    <div class="skill-box">
-                        <i class="fas fa-leaf"></i>
-                        <h3>Spring</h3>
-                    </div>
-                    <div class="skill-box">
-                        <i class="fab fa-react"></i>
-                        <h3>React</h3>
-                    </div>
-                    <div class="skill-box">
-                        <i class="fas fa-server"></i>
-                        <h3>ASP.NET Core</h3>
-                    </div>
-                    <div class="skill-box">
-                        <i class="fab fa-node-js"></i>
-                        <h3>Node.js</h3>
-                    </div>
-                    <div class="skill-box">
-                        <i class="fas fa-bolt"></i>
-                        <h3>Vite</h3>
-                    </div>
-                    <div class="skill-box">
-                        <i class="fas fa-atom"></i>
-                        <h3>Electron</h3>
-                    </div>
-                    <div class="skill-box">
-                        <i class="fas fa-sync"></i>
-                        <h3>Redux</h3>
-                    </div>
-                    <div class="skill-box">
-                        <!-- Custom Hibernate icon using simple shapes -->
-                        <div class="hibernate-icon">
-                            <i class="fas fa-database"></i>
-                            <svg viewBox="0 0 24 24" class="custom-hibernate-icon">
-                                <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 4l6 3v6l-6 3-6-3V9l6-3z"
-                                    fill="currentColor" />
-                            </svg>
-                        </div>
-                        <h3>Hibernate</h3>
-                    </div>
-                    <div class="skill-box">
-                        <i class="fas fa-database"></i>
-                        <h3>Entity Framework</h3>
-                    </div>
-                    <div class="skill-box">
-                        <i class="fab fa-java"></i>
-                        <h3>Java Swing</h3>
-                    </div>
-                    <div class="skill-box">
-                        <i class="fab fa-java"></i>
-                        <h3>JavaFX</h3>
-                    </div>
-                    <div class="skill-box">
-                        <i class="fab fa-bootstrap"></i>
-                        <h3>Bootstrap</h3>
-                    </div>
+            <div class="skill-card skill-card-wide">
+                <div class="card-icon">
+                    <i class="fas fa-cubes"></i>
+                </div>
+                <h3 class="card-title">Frameworks & Libraries</h3>
+                <div class="skill-chips">
+                    <span class="chip"><i class="fas fa-leaf"></i> Spring Boot</span>
+                    <span class="chip"><i class="fab fa-react"></i> React</span>
+                    <span class="chip"><i class="fas fa-server"></i> ASP.NET Core</span>
+                    <span class="chip"><i class="fab fa-node-js"></i> Node.js</span>
+                    <span class="chip"><i class="fas fa-bolt"></i> Vite</span>
+                    <span class="chip"><i class="fas fa-atom"></i> Electron</span>
+                    <span class="chip"><i class="fas fa-sync"></i> Redux</span>
+                    <span class="chip"><i class="fas fa-database"></i> Hibernate</span>
+                    <span class="chip"><i class="fas fa-database"></i> Entity Framework</span>
+                    <span class="chip"><i class="fab fa-java"></i> Java Swing</span>
+                    <span class="chip"><i class="fab fa-java"></i> JavaFX</span>
+                    <span class="chip"><i class="fab fa-bootstrap"></i> Bootstrap</span>
                 </div>
             </div>
 
             <!-- Web Technologies -->
-            <div class="skill-category">
-                <h2>Web Technologies</h2>
-                <div class="skill-items">
-                    <div class="skill-box">
-                        <i class="fab fa-html5"></i>
-                        <h3>HTML</h3>
-                    </div>
-                    <div class="skill-box">
-                        <i class="fab fa-css3-alt"></i>
-                        <h3>CSS</h3>
-                    </div>
-                    <div class="skill-box">
-                        <i class="fab fa-js"></i>
-                        <h3>JSP</h3>
-                    </div>
-                    <div class="skill-box">
-                        <i class="fas fa-server"></i>
-                        <h3>Servlets</h3>
-                    </div>
+            <div class="skill-card">
+                <div class="card-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h3 class="card-title">Web Technologies</h3>
+                <div class="skill-chips">
+                    <span class="chip"><i class="fab fa-html5"></i> HTML5</span>
+                    <span class="chip"><i class="fab fa-css3-alt"></i> CSS3</span>
+                    <span class="chip"><i class="fab fa-js"></i> JSP</span>
+                    <span class="chip"><i class="fas fa-server"></i> Servlets</span>
                 </div>
             </div>
 
             <!-- Tools -->
-            <div class="skill-category">
-                <h2>Tools</h2>
-                <div class="skill-items">
-                    <div class="skill-box">
-                        <i class="fab fa-git-alt"></i>
-                        <h3>Git</h3>
-                    </div>
-                    <div class="skill-box">
-                        <i class="fab fa-github"></i>
-                        <h3>Github</h3>
-                    </div>
-                    <div class="skill-box">
-                        <i class="fas fa-layer-group"></i>
-                        <h3>Git Stash</h3>
-                    </div>
-                    <div class="skill-box">
-                        <i class="fab fa-jira"></i>
-                        <h3>Jira</h3>
-                    </div>
-                    <div class="skill-box">
-                        <i class="fas fa-cogs"></i>
-                        <h3>Maven</h3>
-                    </div>
-                    <div class="skill-box">
-                        <i class="fas fa-cube"></i>
-                        <h3>Gradle</h3>
-                    </div>
-                    <div class="skill-box">
-                        <i class="fas fa-box-open"></i>
-                        <h3>Webpack</h3>
-                    </div>
-                    <div class="skill-box">
-                        <i class="fas fa-sync-alt"></i>
-                        <h3>Babel</h3>
-                    </div>
-                    <div class="skill-box">
-                        <i class="fas fa-code-branch"></i>
-                        <h3>IntelliJ IDEA</h3>
-                    </div>
-                    <div class="skill-box">
-                        <i class="fas fa-check-circle"></i>
-                        <h3>ESLint</h3>
-                    </div>
+            <div class="skill-card skill-card-tall">
+                <div class="card-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3 class="card-title">Dev Tools</h3>
+                <div class="skill-chips">
+                    <span class="chip"><i class="fab fa-git-alt"></i> Git</span>
+                    <span class="chip"><i class="fab fa-github"></i> GitHub</span>
+                    <span class="chip"><i class="fab fa-jira"></i> Jira</span>
+                    <span class="chip"><i class="fas fa-cogs"></i> Maven</span>
+                    <span class="chip"><i class="fas fa-cube"></i> Gradle</span>
+                    <span class="chip"><i class="fas fa-box-open"></i> Webpack</span>
+                    <span class="chip"><i class="fas fa-sync-alt"></i> Babel</span>
+                    <span class="chip"><i class="fas fa-code-branch"></i> IntelliJ</span>
+                    <span class="chip"><i class="fas fa-check-circle"></i> ESLint</span>
                 </div>
             </div>
 
             <!-- Data Management -->
-            <div class="skill-category">
-                <h2>Data Management</h2>
-                <div class="skill-items">
-                    <div class="skill-box">
-                        <i class="fas fa-database"></i>
-                        <h3>MySQL</h3>
-                    </div>
-                    <div class="skill-box">
-                        <i class="fas fa-database"></i>
-                        <h3>PostgreSQL</h3>
-                    </div>
-                    <div class="skill-box">
-                        <i class="fas fa-database"></i>
-                        <h3>SQLite</h3>
-                    </div>
-                    <div class="skill-box">
-                        <i class="fas fa-code"></i>
-                        <h3>JSON</h3>
-                    </div>
+            <div class="skill-card">
+                <div class="card-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <h3 class="card-title">Databases</h3>
+                <div class="skill-chips">
+                    <span class="chip"><i class="fas fa-database"></i> MySQL</span>
+                    <span class="chip"><i class="fas fa-database"></i> PostgreSQL</span>
+                    <span class="chip"><i class="fas fa-database"></i> SQLite</span>
+                    <span class="chip"><i class="fas fa-code"></i> JSON</span>
                 </div>
             </div>
 
             <!-- API Development -->
-            <div class="skill-category">
-                <h2>API Development</h2>
-                <div class="skill-items">
-                    <div class="skill-box">
-                        <i class="fas fa-exchange-alt"></i>
-                        <h3>REST API</h3>
-                    </div>
-                    <div class="skill-box">
-                        <i class="fas fa-file-code"></i>
-                        <h3>Swagger</h3>
-                    </div>
-                    <div class="skill-box">
-                        <i class="fas fa-paper-plane"></i>
-                        <h3>Postman</h3>
-                    </div>
+            <div class="skill-card">
+                <div class="card-icon">
+                    <i class="fas fa-plug"></i>
+                </div>
+                <h3 class="card-title">API & Testing</h3>
+                <div class="skill-chips">
+                    <span class="chip"><i class="fas fa-exchange-alt"></i> REST API</span>
+                    <span class="chip"><i class="fas fa-file-code"></i> Swagger</span>
+                    <span class="chip"><i class="fas fa-paper-plane"></i> Postman</span>
                 </div>
             </div>
 
-            <!-- OS -->
-            <div class="skill-category">
-                <h2>Operating System</h2>
-                <div class="skill-items">
-                    <div class="skill-box">
-                        <i class="fab fa-windows"></i>
-                        <h3>Windows</h3>
-                    </div>
-                    <div class="skill-box">
-                        <i class="fab fa-apple"></i>
-                        <h3>MacOS</h3>
-                    </div>
-                    <div class="skill-box">
-                        <i class="fab fa-linux"></i>
-                        <h3>Linux</h3>
-                    </div>
+            <!-- Operating Systems -->
+            <div class="skill-card">
+                <div class="card-icon">
+                    <i class="fas fa-desktop"></i>
+                </div>
+                <h3 class="card-title">Operating Systems</h3>
+                <div class="skill-chips">
+                    <span class="chip"><i class="fab fa-windows"></i> Windows</span>
+                    <span class="chip"><i class="fab fa-apple"></i> macOS</span>
+                    <span class="chip"><i class="fab fa-linux"></i> Linux</span>
                 </div>
             </div>
         </div>
-        <a href="rishav_parasar_resume.pdf" download class="btn">
-            Download Resume <i class="fas fa-download"></i>
-        </a>
     </section>
     <!-- Portfolio Section -->
     <section class="portfolio" id="portfolio">
-        <h1 class="heading">My <span>Projects</span></h1>
-
-        <div class="filter-buttons">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="web">Web</button>
-            <button class="filter-btn" data-filter="app">App</button>
-            <button class="filter-btn" data-filter="ai">AI/ML</button>
+        <div class="section-header">
+            <span class="section-tag">Portfolio</span>
+            <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+            <p class="section-subtitle">A selection of my recent work</p>
         </div>
 
-        <div class="work-list">
-            <!-- Project cards with corrected image paths -->
-            <div class="work" data-category="app">
-                <img src="images/Projects/Re-Winder.png" alt="Re-Winder">
-                <div class="layer">
-                    <h3>RE-WINDER</h3>
-                    <p>A powerful screen activity recorder that helps you rewind and
-                        review your day through automated screenshots and time-lapse creation.</p>
-                    <a href="https://github.com/Parasar33/Re-Winder" target="_blank">
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-            </div>
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">
+                <i class="fas fa-th-large"></i>
+                <span>All</span>
+            </button>
+            <button class="filter-btn" data-filter="web">
+                <i class="fas fa-globe"></i>
+                <span>Web</span>
+            </button>
+            <button class="filter-btn" data-filter="app">
+                <i class="fas fa-mobile-alt"></i>
+                <span>App</span>
+            </button>
+            <button class="filter-btn" data-filter="ai">
+                <i class="fas fa-brain"></i>
+                <span>AI/ML</span>
+            </button>
+        </div>
 
-            <div class="work" data-category="ai">
-                <img src="images/Projects/RAG_PDF.png" alt="RAG PDF Viewer">
-                <div class="layer">
-                    <h3>RAG BASED PDF-VIEWER</h3>
-                    <p>A PDF viewer with Retrieval Augmented Generation (RAG) for enhanced
-                        document search and quick information retrieval.</p>
-                    <a href="https://github.com/Parasar33/PDF-VIEWER" target="_blank">
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
+        <div class="projects-grid">
+            <!-- Project cards -->
+            <article class="project-card" data-category="app">
+                <div class="project-image">
+                    <img src="images/Projects/Re-Winder.png" alt="Re-Winder" loading="lazy">
+                    <div class="project-overlay">
+                        <a href="https://github.com/Parasar33/Re-Winder" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
                 </div>
-            </div>
+                <div class="project-content">
+                    <span class="project-category">Desktop App</span>
+                    <h3 class="project-title">Re-Winder</h3>
+                    <p class="project-description">A powerful screen activity recorder that helps you rewind and review your day through automated screenshots.</p>
+                    <div class="project-tech">
+                        <span>Java</span>
+                        <span>Swing</span>
+                    </div>
+                </div>
+            </article>
 
-            <div class="work" data-category="ai">
-                <img src="images/Projects/digit_recognition.png" alt="Digit Recognition">
-                <div class="layer">
-                    <h3>RLHF BASED DIGIT RECOGNITION</h3>
-                    <p>A digit recognition tool made using Python and Reinforcement Learning through Human Feedback</p>
-                    <a href="https://github.com/Parasar33/RLHF-Digit-Recognition" target="_blank">
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
+            <article class="project-card" data-category="ai">
+                <div class="project-image">
+                    <img src="images/Projects/RAG_PDF.png" alt="RAG PDF Viewer" loading="lazy">
+                    <div class="project-overlay">
+                        <a href="https://github.com/Parasar33/PDF-VIEWER" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
                 </div>
-            </div>
+                <div class="project-content">
+                    <span class="project-category">AI/ML</span>
+                    <h3 class="project-title">RAG PDF Viewer</h3>
+                    <p class="project-description">PDF viewer with Retrieval Augmented Generation for enhanced document search and quick information retrieval.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>RAG</span>
+                        <span>LLM</span>
+                    </div>
+                </div>
+            </article>
 
-            <div class="work" data-category="web">
-                <img src="images/Projects/attendblock.png" alt="AttendBlock">
-                <div class="layer">
-                    <h3>ATTENDBLOCK</h3>
-                    <p>A blockchain-powered attendance management system providing secure, and tamper-proof
-                        attendance tracking with role-based access control.</p>
-                    <a href="https://github.com/Parasar33/AttendBlock" target="_blank">
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
+            <article class="project-card" data-category="ai">
+                <div class="project-image">
+                    <img src="images/Projects/digit_recognition.png" alt="Digit Recognition" loading="lazy">
+                    <div class="project-overlay">
+                        <a href="https://github.com/Parasar33/RLHF-Digit-Recognition" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="work" data-category="app">
-                <img src="images/Projects/snakes_ladders.png" alt="Snakes & Ladders">
-                <div class="layer">
-                    <h3>JAVA SNAKES & LADDERS</h3>
-                    <p>The game features turn-based gameplay, dice roll functionality, and a graphical display of the
-                        board.</p>
-                    <a href="https://github.com/Parasar33/Snakes-and-Ladders" target="_blank">
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
+                <div class="project-content">
+                    <span class="project-category">AI/ML</span>
+                    <h3 class="project-title">RLHF Digit Recognition</h3>
+                    <p class="project-description">Digit recognition tool using Reinforcement Learning through Human Feedback.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>RLHF</span>
+                        <span>ML</span>
+                    </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="work" data-category="ai">
-                <img src="images/Projects/dynamic_route.png" alt="Route Navigation">
-                <div class="layer">
-                    <h3>ROUTE NAVIGATION OPTIMIZER</h3>
-                    <p>A route-finding tool that combines Genetic Algorithm optimization with A* Search for efficient
-                        and dynamic pathfinding solutions.</p>
-                    <a href="https://github.com/Parasar33/Dynamic-Route" target="_blank">
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
+            <article class="project-card" data-category="web">
+                <div class="project-image">
+                    <img src="images/Projects/attendblock.png" alt="AttendBlock" loading="lazy">
+                    <div class="project-overlay">
+                        <a href="https://github.com/Parasar33/AttendBlock" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
                 </div>
-            </div>
+                <div class="project-content">
+                    <span class="project-category">Web App</span>
+                    <h3 class="project-title">AttendBlock</h3>
+                    <p class="project-description">Blockchain-powered attendance management with tamper-proof tracking and role-based access control.</p>
+                    <div class="project-tech">
+                        <span>Blockchain</span>
+                        <span>Web3</span>
+                    </div>
+                </div>
+            </article>
 
-            <div class="work" data-category="app">
-                <img src="images/Projects/snake_play.png" alt="Snake Game">
-                <div class="layer">
-                    <h3>SNAKE GAME REMASTERED</h3>
-                    <p>The game includes high score tracking and persistent data storage to save the highest scores
-                        achieved by players.</p>
-                    <a href="https://github.com/Parasar33/Java-Snake-Game" target="_blank">
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
+            <article class="project-card" data-category="app">
+                <div class="project-image">
+                    <img src="images/Projects/snakes_ladders.png" alt="Snakes & Ladders" loading="lazy">
+                    <div class="project-overlay">
+                        <a href="https://github.com/Parasar33/Snakes-and-Ladders" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
                 </div>
-            </div>
+                <div class="project-content">
+                    <span class="project-category">Desktop App</span>
+                    <h3 class="project-title">Snakes & Ladders</h3>
+                    <p class="project-description">Classic board game with turn-based gameplay, dice roll functionality, and graphical display.</p>
+                    <div class="project-tech">
+                        <span>Java</span>
+                        <span>Swing</span>
+                    </div>
+                </div>
+            </article>
 
-            <div class="work" data-category="app">
-                <img src="images/Projects/sudoku.png" alt="Sudoku Solver">
-                <div class="layer">
-                    <h3>GUI BASED SUDOKU SOLVER</h3>
-                    <p>The code initializes the GUI components and handles user interactions for both solving and
-                        getting solutions.</p>
-                    <a href="https://github.com/Parasar33/Sudoku-Solver-GUI" target="_blank">
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
+            <article class="project-card" data-category="ai">
+                <div class="project-image">
+                    <img src="images/Projects/dynamic_route.png" alt="Route Navigation" loading="lazy">
+                    <div class="project-overlay">
+                        <a href="https://github.com/Parasar33/Dynamic-Route" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
                 </div>
-            </div>
+                <div class="project-content">
+                    <span class="project-category">AI/ML</span>
+                    <h3 class="project-title">Route Navigator</h3>
+                    <p class="project-description">Route-finding combining Genetic Algorithm optimization with A* Search for dynamic pathfinding.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>GA</span>
+                        <span>A*</span>
+                    </div>
+                </div>
+            </article>
 
-            <div class="work" data-category="ai">
-                <img src="images/Projects/tictactoeAI.png" alt="TicTacToe AI">
-                <div class="layer">
-                    <h3>TIC-TAC-TOE AI</h3>
-                    <p>pySimpleGUI based unbeatable tic tac toe by minimax algorithm.</p>
-                    <a href="https://github.com/Parasar33/Tic-Tac-Toe-vs-AI" target="_blank">
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
+            <article class="project-card" data-category="app">
+                <div class="project-image">
+                    <img src="images/Projects/snake_play.png" alt="Snake Game" loading="lazy">
+                    <div class="project-overlay">
+                        <a href="https://github.com/Parasar33/Java-Snake-Game" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
                 </div>
-            </div>
+                <div class="project-content">
+                    <span class="project-category">Desktop App</span>
+                    <h3 class="project-title">Snake Remastered</h3>
+                    <p class="project-description">Classic snake game with high score tracking and persistent data storage.</p>
+                    <div class="project-tech">
+                        <span>Java</span>
+                        <span>Swing</span>
+                    </div>
+                </div>
+            </article>
 
-            <div class="work" data-category="web">
-                <img src="images/Projects/bookStore.jpg" alt="Book Store">
-                <div class="layer">
-                    <h3>ONLINE BOOK STORE</h3>
-                    <p>The book store operates using HTML,CSS, and primarily PHP & MySQL to provide a good user
-                        experience.</p>
-                    <a href="https://github.com/Parasar33/Book-Store" target="_blank">
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
+            <article class="project-card" data-category="app">
+                <div class="project-image">
+                    <img src="images/Projects/sudoku.png" alt="Sudoku Solver" loading="lazy">
+                    <div class="project-overlay">
+                        <a href="https://github.com/Parasar33/Sudoku-Solver-GUI" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
                 </div>
-            </div>
+                <div class="project-content">
+                    <span class="project-category">Desktop App</span>
+                    <h3 class="project-title">Sudoku Solver</h3>
+                    <p class="project-description">GUI-based Sudoku solver with interactive puzzle solving capabilities.</p>
+                    <div class="project-tech">
+                        <span>Java</span>
+                        <span>Swing</span>
+                    </div>
+                </div>
+            </article>
 
-            <div class="work" data-category="app">
-                <img src="images/Projects/atm.png" alt="ATM GUI">
-                <div class="layer">
-                    <h3>ATM GUI</h3>
-                    <p>Created an ATM software using swing tools.</p>
-                    <a href="https://github.com/Parasar33/ATM_GUI" target="_blank">
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
+            <article class="project-card" data-category="ai">
+                <div class="project-image">
+                    <img src="images/Projects/tictactoeAI.png" alt="TicTacToe AI" loading="lazy">
+                    <div class="project-overlay">
+                        <a href="https://github.com/Parasar33/Tic-Tac-Toe-vs-AI" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
                 </div>
-            </div>
+                <div class="project-content">
+                    <span class="project-category">AI/ML</span>
+                    <h3 class="project-title">Tic-Tac-Toe AI</h3>
+                    <p class="project-description">Unbeatable Tic-Tac-Toe using minimax algorithm with pySimpleGUI.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Minimax</span>
+                    </div>
+                </div>
+            </article>
 
-            <div class="work" data-category="app">
-                <img src="images/Projects/resturant.png" alt="Restaurant Billing">
-                <div class="layer">
-                    <h3>RESTAURANT BILLING SYSTEM</h3>
-                    <p>Easy and simple restaurant billing program using C language.</p>
-                    <a href="https://github.com/Parasar33/C--RESTURANT-BILLING-SYSTEM" target="_blank">
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
+            <article class="project-card" data-category="web">
+                <div class="project-image">
+                    <img src="images/Projects/bookStore.jpg" alt="Book Store" loading="lazy">
+                    <div class="project-overlay">
+                        <a href="https://github.com/Parasar33/Book-Store" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
                 </div>
-            </div>
+                <div class="project-content">
+                    <span class="project-category">Web App</span>
+                    <h3 class="project-title">Online Book Store</h3>
+                    <p class="project-description">E-commerce book store with PHP backend and MySQL database.</p>
+                    <div class="project-tech">
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                    </div>
+                </div>
+            </article>
 
-            <div class="work" data-category="app">
-                <img src="images/Projects/railway.png" alt="Railway Reservation">
-                <div class="layer">
-                    <h3>RAILWAY RESERVATION SYSTEM</h3>
-                    <p>Here is a C code that will help users create tickets for travelers.</p>
-                    <a href="https://github.com/Parasar33/Railway_Reservation_system" target="_blank">
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
+            <article class="project-card" data-category="app">
+                <div class="project-image">
+                    <img src="images/Projects/atm.png" alt="ATM GUI" loading="lazy">
+                    <div class="project-overlay">
+                        <a href="https://github.com/Parasar33/ATM_GUI" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
                 </div>
-            </div>
+                <div class="project-content">
+                    <span class="project-category">Desktop App</span>
+                    <h3 class="project-title">ATM GUI</h3>
+                    <p class="project-description">ATM software simulation with full banking operations.</p>
+                    <div class="project-tech">
+                        <span>Java</span>
+                        <span>Swing</span>
+                    </div>
+                </div>
+            </article>
 
-            <div class="work" data-category="app">
-                <img src="images/Projects/tictactoe.png" alt="TicTacToe Game">
-                <div class="layer">
-                    <h3>GUI BASED TIC-TAC-TOE GAME</h3>
-                    <p>This code is a simple implementation of a Tic-Tac-Toe game using Java Swing.</p>
-                    <a href="https://github.com/Parasar33/Tic-Tac-Toe-GUI" target="_blank">
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
+            <article class="project-card" data-category="app">
+                <div class="project-image">
+                    <img src="images/Projects/resturant.png" alt="Restaurant Billing" loading="lazy">
+                    <div class="project-overlay">
+                        <a href="https://github.com/Parasar33/C--RESTURANT-BILLING-SYSTEM" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
                 </div>
-            </div>
+                <div class="project-content">
+                    <span class="project-category">Console App</span>
+                    <h3 class="project-title">Restaurant Billing</h3>
+                    <p class="project-description">Simple and efficient restaurant billing system.</p>
+                    <div class="project-tech">
+                        <span>C</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card" data-category="app">
+                <div class="project-image">
+                    <img src="images/Projects/railway.png" alt="Railway Reservation" loading="lazy">
+                    <div class="project-overlay">
+                        <a href="https://github.com/Parasar33/Railway_Reservation_system" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <span class="project-category">Console App</span>
+                    <h3 class="project-title">Railway Reservation</h3>
+                    <p class="project-description">Ticket booking system for railway travelers.</p>
+                    <div class="project-tech">
+                        <span>C</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card" data-category="app">
+                <div class="project-image">
+                    <img src="images/Projects/tictactoe.png" alt="TicTacToe Game" loading="lazy">
+                    <div class="project-overlay">
+                        <a href="https://github.com/Parasar33/Tic-Tac-Toe-GUI" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <span class="project-category">Desktop App</span>
+                    <h3 class="project-title">Tic-Tac-Toe GUI</h3>
+                    <p class="project-description">Classic Tic-Tac-Toe game implementation using Java Swing.</p>
+                    <div class="project-tech">
+                        <span>Java</span>
+                        <span>Swing</span>
+                    </div>
+                </div>
+            </article>
         </div>
     </section>
     <!-- Contact Section -->
     <section class="contact" id="contact">
-        <h1 class="heading"><span>Contact</span> Me</h1>
-        <div class="row">
-            <div class="content">
-                <h3 class="title">Contact Info</h3>
-                <div class="info">
-                    <a href="https://www.linkedin.com/in/rishav-parasar/" target="_blank">
-                        <i class="fab fa-linkedin"></i> LinkedIn
-                    </a>
-                    <a href="https://github.com/parasar33" target="_blank">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                    <a href="mailto:rishavparasar2004@gmail.com">
-                        <i class="fas fa-envelope"></i> Gmail
-                    </a>
-                    <a href="#">
-                        <i class="fas fa-map-marker-alt"></i> Pune, Maharashtra
-                    </a>
+        <div class="section-header">
+            <span class="section-tag">Connect</span>
+            <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+            <p class="section-subtitle">Let's build something amazing together</p>
+        </div>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="info-content">
+                        <h4>Email</h4>
+                        <a href="mailto:rishavparasar2004@gmail.com">rishavparasar2004@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <div class="info-content">
+                        <h4>LinkedIn</h4>
+                        <a href="https://www.linkedin.com/in/rishav-parasar/" target="_blank">@rishav-parasar</a>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="info-content">
+                        <h4>GitHub</h4>
+                        <a href="https://github.com/parasar33" target="_blank">@parasar33</a>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="info-content">
+                        <h4>Location</h4>
+                        <span>Pune, Maharashtra, India</span>
+                    </div>
                 </div>
             </div>
 
-            <!-- Updated form (JS handles submission) -->
-            <form class="form" id="contact-form">
-                <input type="text" name="Name" placeholder="Name" class="box" required>
-                <input type="email" name="Email" placeholder="Email" class="box" required>
-                <textarea name="Message" cols="30" rows="10" class="box message" placeholder="Message"
-                    required></textarea>
-                <button type="submit" class="btn">Send <i class="fas fa-paper-plane"></i></button>
-                <span id="msg"></span>
+            <form class="contact-form" id="contact-form">
+                <div class="form-group">
+                    <input type="text" name="Name" id="name" required>
+                    <label for="name">Your Name</label>
+                    <span class="input-line"></span>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="Email" id="email" required>
+                    <label for="email">Your Email</label>
+                    <span class="input-line"></span>
+                </div>
+                <div class="form-group">
+                    <textarea name="Message" id="message" rows="5" required></textarea>
+                    <label for="message">Your Message</label>
+                    <span class="input-line"></span>
+                </div>
+                <button type="submit" class="btn btn-primary btn-submit">
+                    <span>Send Message</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+                <span id="msg" class="form-message"></span>
             </form>
         </div>
     </section>
 
-
     <!-- Scroll to Top -->
-    <a href="#home" class="top">
+    <a href="#home" class="scroll-top top" aria-label="Scroll to top">
         <i class="fas fa-arrow-up"></i>
     </a>
 
     <!-- Footer -->
     <footer>
-        <p class="copyright">All Rights Reserved</p>
-        <div class="social-links">
-            <a href="https://parasar33.github.io/blog" target="_blank">
-                <i class="fas fa-pencil-alt"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/rishav-parasar/" target="_blank">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/parasar33" target="_blank">
-                <i class="fab fa-github"></i>
-            </a>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="brand-logo">RP</span>
+                <p>Building digital experiences with passion and precision.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#portfolio">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://parasar33.github.io/blog" target="_blank" aria-label="Blog">
+                    <i class="fas fa-pencil-alt"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/rishav-parasar/" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/parasar33" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Rishav Parasar. Crafted with <i class="fas fa-heart"></i> and lots of coffee.</p>
         </div>
     </footer>
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://kit.fontawesome.com/09df685748.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 
