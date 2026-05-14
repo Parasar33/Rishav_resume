@@ -18,6 +18,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Generate env.js from GitHub Secret
+        run: |
+          cat > env.js <<'EOF'
+          window.__ENV = { WEB3FORMS_KEY: "${{ secrets.WEB3FORMS_KEY }}" };
+          EOF
+
       - name: Build (no build step)
         run: echo "No build step required for this static site"
 
