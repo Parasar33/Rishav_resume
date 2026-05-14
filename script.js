@@ -8,7 +8,6 @@ const header = document.querySelector('header');
 const filterBtns = document.querySelectorAll('.filter-btn');
 const projects = document.querySelectorAll('.project-card');
 const form = document.getElementById('contact-form');
-form.addEventListener('submit', handleForm);
 
 // Typing Animation Phrases
 const phrases = [
@@ -95,6 +94,10 @@ function filterProjects(category) {
     });
 }
 
+// Runtime configuration (injected via `env.js`)
+// For local development run `node tools/generate-env.js` or create `env.js` manually.
+const WEB3FORMS_KEY = (window.__ENV && window.__ENV.WEB3FORMS_KEY) || null;
+
 // Form Handling
 function handleForm(e) {
     e.preventDefault();
@@ -107,6 +110,15 @@ function handleForm(e) {
     
     const msg = document.getElementById('msg');
 
+    if (!WEB3FORMS_KEY) {
+        msg.innerHTML = "Form is disabled — missing configuration (WEB3FORMS_KEY).";
+        msg.style.color = "#ef4444";
+        submitBtn.innerHTML = originalBtnText;
+        submitBtn.disabled = false;
+        setTimeout(() => { msg.innerHTML = ""; }, 5000);
+        return;
+    }
+
     fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
@@ -114,7 +126,7 @@ function handleForm(e) {
             'Accept': 'application/json'
         },
         body: JSON.stringify({
-            access_key: "04967c76-a642-4d04-a468-d31c89fc36c8",
+            access_key: WEB3FORMS_KEY,
             name: form.querySelector('input[name="Name"]').value,
             email: form.querySelector('input[name="Email"]').value,
             message: form.querySelector('textarea[name="Message"]').value
@@ -182,6 +194,11 @@ document.addEventListener('DOMContentLoaded', () => {
         document.documentElement.setAttribute('data-theme', savedTheme);
         if (themeToggle) themeToggle.checked = savedTheme === 'light';
     }
+
+    // Attach form submit handler after DOM is ready to guarantee element exists
+    if (form) {
+        form.addEventListener('submit', handleForm);
+    }
 });
 
 // Scroll events
@@ -233,8 +250,7 @@ filterBtns.forEach(btn => {
     });
 });
 
-// Form submission
-form.addEventListener('submit', handleForm);
+// Form submission (listener added above)
 
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
